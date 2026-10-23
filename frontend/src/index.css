@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #1F1D1D;
+    background-color: #FDFBF7;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F1EA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C85A32;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A84622;
+}
+
+/* Glassmorphism helpers */
+.glass-nav {
+  background: rgba(253, 251, 247, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(232, 226, 216, 0.7);
+}
+
+.glass-nav-dark {
+  background: rgba(31, 29, 29, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 226, 216, 0.8);
+}
+
+.glass-card-dark {
+  background: rgba(37, 34, 34, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle Shimmer for luxury elements */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-gold {
+  background: linear-gradient(90deg, rgba(212,175,55,0.1) 0%, rgba(212,175,55,0.35) 50%, rgba(212,175,55,0.1) 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 4s infinite linear;
+}
